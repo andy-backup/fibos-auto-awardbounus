@@ -40,7 +40,7 @@ const main = async () => {
 };
 main();
 
-setInterval(main, 1 * 60 * 60 * 1000);
+setInterval(main, 1 * 60 * 60 * 1000 + 5000);
 
 const onTransfer = async () => {
   if (!queues.length) return;
