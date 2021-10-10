@@ -9,7 +9,7 @@
   WORKDIR $APP_PATH
 
   # install node js and yarn
-  RUN apk add --no-cache --update nodejs=14.17.4-r0 yarn=1.22.10-r0
+  RUN apk add --no-cache --update nodejs=14.17.6-r0 yarn=1.22.10-r0
 
 # use the basal mirroring dependence phase
   FROM base AS install
