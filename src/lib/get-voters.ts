@@ -29,9 +29,14 @@ export const getVoters = async () => {
   let page = 0;
   let isMore = true;
   let lower_bound = '';
+  const json = true;
+  const scope = 'eosio';
+  const code = 'eosio';
+  const table = 'voters';
+  const limit = 200;
+  const key_type = 'name';
   do {
-    const limit = 200;
-    const data = { json: true, scope: 'eosio', code: 'eosio', table: 'voters', limit, lower_bound };
+    const data = { json, scope, code, table, limit, lower_bound, key_type };
     const resRaw = await fetch(httpEndpoint + '/v1/chain/get_table_rows', {
       body: JSON.stringify(data),
       method: 'POST',
